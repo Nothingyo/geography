@@ -46,7 +46,7 @@ let createMenu = () => {
 	let menu = document.querySelector('.menu');
 	//let menu - item = document.querySelectorAll('.menu-item');
 	menuItem.map((e, index) => {
-		menu.innerHTML += `<li class="menu-item-${index}"><a href="#">${e.name}</a></li>`
+		menu.innerHTML += `<li class="menu-item-${index}"><a href="assets/html/${index}.html">${e.name}</a></li>`
 	})
 
 }
@@ -61,12 +61,6 @@ let createTool = () => {
 	tools.innerHTML = html;
 }
 
-let call = () => {
-	$('.menu-item-0').load('assets/html/first.html');
-	$('.menu-item-1').load('assets/html/ggallery.html');
-}
-
 createHeaderMain();
 createMenu();
 createTool();
-call();
