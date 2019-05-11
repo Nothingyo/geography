@@ -18,7 +18,7 @@ let createHeaderMain = () => {
 		<div class="part-one">
 		  <div class="wpr">
 			<div class="logo">
-				<img src="./pictures/logo.png">
+				<img src="./assets/pictures/logo.png">
 			</div>
 			<div class="search">
 				<form id="search">
@@ -54,12 +54,19 @@ let createMenu = () => {
 let createTool = () => {
 	let tools = document.querySelector('.tools');
 	let html = `
-	<li class="tool1"><a href="#">APP</a></li>
+	<li class="tool1"><a>APP</a></li>
 	<li class="tool2"><a href="#">投稿</a></li>
 	<li class="tool3"><a href="#"></a></li>
 	`
 	tools.innerHTML = html;
 }
+
+let call = () => {
+	$('.menu-item-0').load('assets/html/first.html');
+	$('.menu-item-1').load('assets/html/ggallery.html');
+}
+
 createHeaderMain();
 createMenu();
 createTool();
+call();
