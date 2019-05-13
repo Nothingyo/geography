@@ -13,12 +13,13 @@ const menuItem = [{
 }, {
 	name: '商城'
 }]
+
 let createHeaderMain = () => {
 	let html = `
 		<div class="part-one">
 		  <div class="wpr">
 			<div class="logo">
-				<img src="./assets/pictures/logo.png">
+				<img src="/Users/Dengqinlan/geography/assets/pictures/logo.png">
 			</div>
 			<div class="search">
 				<form id="search">
@@ -46,7 +47,7 @@ let createMenu = () => {
 	let menu = document.querySelector('.menu');
 	//let menu - item = document.querySelectorAll('.menu-item');
 	menuItem.map((e, index) => {
-		menu.innerHTML += `<li class="menu-item-${index}"><a href="assets/html/${index}.html">${e.name}</a></li>`
+		menu.innerHTML += `<li class="menu-item-${index}"><a href="/Users/Dengqinlan/geography/assets/html/${index}.html">${e.name}</a></li>`
 	})
 
 }
@@ -54,8 +55,8 @@ let createMenu = () => {
 let createTool = () => {
 	let tools = document.querySelector('.tools');
 	let html = `
-	<li class="tool1"><a>APP</a></li>
-	<li class="tool2"><a href="#">投稿</a></li>
+	<li class="tool1"><a href="/Users/Dengqinlan/geography/assets/html/APP.html">APP</a></li>
+	<li class="tool2"><a href="/Users/Dengqinlan/geography/assets/html/post.html">投稿</a></li>
 	<li class="tool3"><a href="#"></a></li>
 	`
 	tools.innerHTML = html;
