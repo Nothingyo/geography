@@ -19,7 +19,7 @@ let createHeaderMain = () => {
 		<div class="part-one">
 		  <div class="wpr">
 			<div class="logo">
-				<img src="../pictures/logo.png">
+				<img src="../assets/pictures/logo.png">
 			</div>
 			<div class="search">
 				<form id="search">
@@ -43,11 +43,16 @@ let createHeaderMain = () => {
 }
 
 let createMenu = () => {
-
+	let scriptArgs = document.getElementById('headerScript').getAttribute('data');
+	scriptArgs = Number(scriptArgs);
 	let menu = document.querySelector('.menu');
 	//let menu - item = document.querySelectorAll('.menu-item');
 	menuItem.map((e, index) => {
-		menu.innerHTML += `<li class="menu-item-${index}"><a href="./${index}.html">${e.name}</a></li>`
+		if (scriptArgs === index) {
+			menu.innerHTML += `<li class="menu-item-${index}-active"><a href="./${index}.html">${e.name}</a></li>`
+		} else {
+			menu.innerHTML += `<li class="menu-item-${index}"><a href="./${index}.html">${e.name}</a></li>`
+		}
 	})
 
 }
@@ -61,7 +66,6 @@ let createTool = () => {
 	`
 	tools.innerHTML = html;
 }
-
 createHeaderMain();
 createMenu();
 createTool();
