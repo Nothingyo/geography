@@ -4,7 +4,7 @@ const News = [{
 	text: '打卡新地标！中国国家地理“红框”落户莫干山、下渚湖'
 }]
 
-const
+
 let createContent = () => {
 	let html = `
 		<div class="ad">
