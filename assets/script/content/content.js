@@ -206,7 +206,6 @@ let addFocusMenuClick = () => {
 			menuLi[focusMenuIndex].className = '';
 			e.className = 'active';
 			focusMenuIndex = index;
-			PageIndex = 0;
 			createFocusSliderPictureAndPage();
 			focusSliderPage.style.margin = "0 auto";
 		}
@@ -233,82 +232,60 @@ let createFocusSliderPictureAndPage = () => {
 			<li><img src="${focusPictures0[i].src}"/></li>
 		`
 			focusSliderPicture.innerHTML += html;
-			if (i === 0) {
-				let html2 = `<li class="show"><img src="${focusPictures0[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			} else {
-				let html2 = `<li><img src="${focusPictures0[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			}
+			let html2 = `<li><img src="${focusPictures0[i].src}" /></li>`
+			focusSliderPage.innerHTML += html2;
+
 		}
 		focusSliderPage.style.width = focusPictures0.length * 90 + "px";
-		addFocusSliderPage();
 	} else if (focusMenuIndex === 1) {
 		for (let i = 0; i < focusPictures1.length; i++) {
 			let html = `
 			<li><img src="${focusPictures1[i].src}"/></li>
 		`
 			focusSliderPicture.innerHTML += html;
-			if (i === 0) {
-				let html2 = `<li class="show"><img src="${focusPictures1[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			} else {
-				let html2 = `<li><img src="${focusPictures1[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			}
+			let html2 = `<li><img src="${focusPictures1[i].src}" /></li>`
+			focusSliderPage.innerHTML += html2;
+
 		}
 		focusSliderPage.style.width = focusPictures1.length * 90 + "px";
-		addFocusSliderPage();
 	} else if (focusMenuIndex === 2) {
 		for (let i = 0; i < focusPictures2.length; i++) {
 			let html = `
 			<li><img src="${focusPictures2[i].src}"/></li>
 		`
 			focusSliderPicture.innerHTML += html;
-			if (i === 0) {
-				let html2 = `<li class="show"><img src="${focusPictures2[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			} else {
-				let html2 = `<li><img src="${focusPictures2[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			}
+			let html2 = `<li><img src="${focusPictures2[i].src}" /></li>`
+			focusSliderPage.innerHTML += html2;
+
 		}
 		focusSliderPage.style.width = focusPictures2.length * 90 + "px";
-		addFocusSliderPage();
 	} else if (focusMenuIndex === 3) {
 		for (let i = 0; i < focusPictures3.length; i++) {
 			let html = `
 			<li><img src="${focusPictures3[i].src}"/></li>
 		`
 			focusSliderPicture.innerHTML += html;
-			if (i === 0) {
-				let html2 = `<li class="show"><img src="${focusPictures3[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			} else {
-				let html2 = `<li><img src="${focusPictures3[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			}
+			let html2 = `<li><img src="${focusPictures3[i].src}" /></li>`
+			focusSliderPage.innerHTML += html2;
+
 		}
 		focusSliderPage.style.width = focusPictures3.length * 90 + "px";
-		addFocusSliderPage();
 	} else {
 		for (let i = 0; i < focusPictures4.length; i++) {
 			let html = `
 			<li><img src="${focusPictures4[i].src}"/></li>
 		`
 			focusSliderPicture.innerHTML += html;
-			if (i === 0) {
-				let html2 = `<li class="show"><img src="${focusPictures4[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			} else {
-				let html2 = `<li><img src="${focusPictures4[i].src}" /></li>`
-				focusSliderPage.innerHTML += html2;
-			}
+			let html2 = `<li><img src="${focusPictures4[i].src}" /></li>`
+			focusSliderPage.innerHTML += html2;
+
 		}
 		focusSliderPage.style.width = focusPictures4.length * 90 + "px";
-		addFocusSliderPage();
-	}
 
+	}
+	let focusSliderPageLi = document.querySelectorAll('.focus-slider-page li');
+	focusSliderPageLi[0].className = "show";
+	addFocusSliderPage();
 }
 let PageIndex = 0;
 let addFocusSliderPage = () => {
