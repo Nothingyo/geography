@@ -1,17 +1,18 @@
 .content {
     width: 960px;
     margin: 0 auto;
-    .ad{
-    	width:960px;
-    	margin:30px 0;
-    	img{
-    		width:100%;
-    	}
+    .ad {
+        width: 960px;
+        margin: 30px 0;
+        img {
+            width: 100%;
+        }
     }
     .scroll-news {
         margin-bottom: 20px;
         width: 960px;
         height: 20px;
+        line-height: 20px;
         overflow: hidden;
         .news {
             width: 380px;
@@ -58,7 +59,6 @@
                     padding: 15px 20px 10px 0;
                     border-bottom: 1px solid #dee0e3;
                     border-right: 1px solid #dee0e3;
-                    position: relative;
                     height: 58px;
                     width: 135px;
                     color: #7e7e7e;
@@ -76,7 +76,29 @@
                 .active {
                     .m;
                     color: #d23133;
-                    border-right-width: 0;
+                    border-right: 1px solid #d23133;
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-top: 18.5px solid transparent;
+                        border-right: 19px solid white;
+                        border-bottom: 18.5px solid transparent;
+                        position: relative;
+                        left: 137px;
+                        bottom: 34px;
+                    }
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-top: 20px solid transparent;
+                        border-right: 20px solid red;
+                        border-bottom: 20px solid transparent;
+                        position: relative;
+                        left: 136px;
+                        bottom: -18.5px;
+                    }
                 }
             }
         }
