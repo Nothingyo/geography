@@ -238,7 +238,7 @@ let createFocusSliderPictureAndPage = () => {
 			focusSliderPage.innerHTML += html2;
 
 		}
-		focusSliderPicture.style.width = focusPictures0.length * 744 + "px";
+		focusSliderPicture.style.width = focusPictures0.length * 740 + "px";
 		focusSliderPage.style.width = focusPictures0.length * 90 + "px";
 	} else if (focusMenuIndex === 1) {
 		for (let i = 0; i < focusPictures1.length; i++) {
@@ -250,7 +250,7 @@ let createFocusSliderPictureAndPage = () => {
 			focusSliderPage.innerHTML += html2;
 
 		}
-		focusSliderPicture.style.width = focusPictures1.length * 744 + "px";
+		focusSliderPicture.style.width = focusPictures1.length * 740 + "px";
 		focusSliderPage.style.width = focusPictures1.length * 90 + "px";
 	} else if (focusMenuIndex === 2) {
 		for (let i = 0; i < focusPictures2.length; i++) {
@@ -262,7 +262,7 @@ let createFocusSliderPictureAndPage = () => {
 			focusSliderPage.innerHTML += html2;
 
 		}
-		focusSliderPicture.style.width = focusPictures2.length * 744 + "px";
+		focusSliderPicture.style.width = focusPictures2.length * 740 + "px";
 		focusSliderPage.style.width = focusPictures2.length * 90 + "px";
 	} else if (focusMenuIndex === 3) {
 		for (let i = 0; i < focusPictures3.length; i++) {
@@ -274,7 +274,7 @@ let createFocusSliderPictureAndPage = () => {
 			focusSliderPage.innerHTML += html2;
 
 		}
-		focusSliderPicture.style.width = focusPictures3.length * 744 + "px";
+		focusSliderPicture.style.width = focusPictures3.length * 740 + "px";
 		focusSliderPage.style.width = focusPictures3.length * 90 + "px";
 	} else {
 		for (let i = 0; i < focusPictures4.length; i++) {
@@ -286,7 +286,7 @@ let createFocusSliderPictureAndPage = () => {
 			focusSliderPage.innerHTML += html2;
 
 		}
-		focusSliderPicture.style.width = focusPictures4.length * 744 + "px";
+		focusSliderPicture.style.width = focusPictures4.length * 740 + "px";
 		focusSliderPage.style.width = focusPictures4.length * 90 + "px";
 	}
 	let focusSliderPageLi = document.querySelectorAll('.focus-slider-page li');
@@ -299,14 +299,14 @@ let addFocusSliderPage = () => {
 	let focusSliderPage = document.querySelector('.focus-slider-page ul');
 	let focusSliderPageLi = document.querySelectorAll('.focus-slider-page li');
 	let focusSliderPicture = document.querySelector('.focus-slider-picture ul');
-	focusSliderPicture.style.margin = "0 0 0 " + (-744) * PageIndex + "px";
+	focusSliderPicture.style.margin = "0 0 0 " + (-740) * PageIndex + "px";
 	focusSliderPageLi.forEach((e, index) => {
 		e.onclick = () => {
 			focusSliderPageLi[PageIndex].className = '';
 			PageIndex = index;
 			focusSliderPageLi[PageIndex].className = 'show';
 			focusSliderPage.style.margin = "0";
-			focusSliderPicture.style.margin = "0 0 0 " + (-744) * PageIndex + "px";
+			focusSliderPicture.style.margin = "0 0 0 " + (-740) * PageIndex + "px";
 		}
 	})
 }
