@@ -182,6 +182,7 @@ let createFocusMenu = () => {
 			  <h3 class="title">${e.title}</h3>
 			  <span class="description">${e.description}</span>
 			  <span class="add">${e.add}</span>
+			  <div class="triangle"></div>
 			</li>
 		`
 			menuGallery.innerHTML += html;
@@ -191,6 +192,7 @@ let createFocusMenu = () => {
 			  <h3 class="title">${e.title}</h3>
 			  <span class="description">${e.description}</span>
 			  <span class="add">${e.add}</span>
+			  <div class="triangle"></div>
 			</li>
 		`
 			menuGallery.innerHTML += html;
