@@ -219,7 +219,7 @@ let createFocusRight = () => {
 		<div class="focus-slider-picture"><ul></ul></div>
 		<div class="focus-slider-page"><ul></ul></div>
 	`
-	let right = document.querySelector('.right');
+	let right = document.querySelector('.focus .right');
 	right.innerHTML = html;
 }
 

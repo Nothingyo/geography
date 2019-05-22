@@ -1,5 +1,6 @@
 .content {
     width: 960px;
+    height: auto;
     margin: 0 auto;
     .ad {
         width: 960px;
@@ -32,9 +33,12 @@
         }
     }
     .focus {
+        height: 500px;
+        padding-top: 40px;
         .left {
             float: left;
             z-index: 100;
+            border-bottom: 2px solid #5c5d5e;
             .subtitle {
                 padding: 7px 28px;
                 color: #fff;
@@ -62,7 +66,8 @@
                     height: 58px;
                     width: 135px;
                     color: #7e7e7e;
-                    h3{
+                    margin-left: 39px;
+                    h3 {
                         font-size: 16px;
                         display: block;
                         text-align: right;
@@ -97,6 +102,7 @@
         .right {
             float: right;
             z-index: 20;
+            border-bottom: 2px solid #5c5d5e;
             .focus-slider-picture {
                 height: 416px;
                 width: 740px;
@@ -107,7 +113,7 @@
                     width: 6680px;
                     li {
                         display: inline-block;
-                    float:left;
+                        float: left;
                         img {
                             height: 100%;
                             width: 100%;
@@ -140,5 +146,123 @@
                 }
             }
         }
+    }
+    .bbs {
+        height: 350px;
+        padding-top: 40px;
+        .left {
+            float: left;
+            width: 195px;
+            border-bottom: 2px solid #5c5d5e;
+            .subtitle {
+                padding: 7px 28px;
+                color: #fff;
+                font-size: 18px;
+                text-align: right;
+                height: 40px;
+                width: 139px;
+                font-weight: 700 ! important;
+                background-color: #5c5d5e;
+                line-height: 20px;
+                height: 40px;
+                width: 139px;
+                .small {
+                    font-size: 14px;
+                    color: #aaa;
+                }
+            }
+            .menu-community {
+                margin-top: 25px;
+                li,
+                .community-li-copy {
+                    cursor: pointer;
+                    background-color: #eee;
+                    height: 22px;
+                    width: 160px;
+                    padding: 8px 20px 8px 15px;
+                    text-align: right;
+                    font-size: 15px;
+                    margin-bottom: 2px;
+                    color: #444;
+                    &:hover {
+                        background-color: #ddd;
+                    }
+                }
+                .active {
+                    .community-li-copy;
+                    background-color: #ddd;
+                }
+            }
+
+        }
+        .right {
+            float: right;
+            width: 760px;
+            border-bottom: 2px solid #5c5d5e;
+            padding-bottom: 20px;
+            .bbs-picture {
+                width: 760px;
+                .bbs-picture-img {
+                    display: inline-block;
+                    overflow: hidden;
+                    cursor: pointer;
+                    height: 200px;
+                    width: auto;
+                    margin-right: 7px;
+            padding-left:10px;
+                    img {
+                        width: 360px;
+                    }
+                    .bbs-picture-sub {
+                        position: relative;
+                        top: -80px;
+                        background: rgba(0, 0, 0, .5);
+                        border-top: 1px solid #000;
+                        font-size: 12px;
+                        text-align: left;
+                        padding-left: 65px;
+                        padding-bottom: 10px;
+                        color: #fff;
+                        z-index: 150;
+                        transition: top 0.3s;
+                        &:hover {
+                            top: -110px;
+                        }
+                    }
+                }
+
+            }
+            .bbs-li {
+                margin-top: 10px;
+                dl {
+                    width: 360px;
+                    height: 24px;
+                    background-color: #eee;
+                    float: left;
+                    color: #5f646a;
+                    margin: 0 7px 0 11px;
+                    line-height: 24px;
+                    dt {
+                        float: left;
+                        width: 226px;
+                        padding-left: 10px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    dd {
+                        float: left;
+                        color: #000;
+                        a {
+                            color: #5f646a;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
