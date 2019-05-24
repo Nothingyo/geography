@@ -26,7 +26,7 @@ const focusMenu = [{
 	add: ''
 }]
 
-const focusPictures0 =
+const focusPictures = [
 	[{
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
@@ -39,8 +39,7 @@ const focusPictures0 =
 	}, {
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
-	}]
-const focusPictures1 =
+	}],
 	[{
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
@@ -53,8 +52,7 @@ const focusPictures1 =
 	}, {
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
-	}]
-const focusPictures2 =
+	}],
 	[{
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
@@ -82,8 +80,7 @@ const focusPictures2 =
 	}, {
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
-	}]
-const focusPictures3 =
+	}],
 	[{
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
@@ -96,8 +93,7 @@ const focusPictures3 =
 	}, {
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
-	}]
-const focusPictures4 =
+	}],
 	[{
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
@@ -114,6 +110,7 @@ const focusPictures4 =
 		src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 		illus: ''
 	}]
+]
 
 let createContent = () => {
 	let html = `
@@ -228,67 +225,17 @@ let createFocusSliderPictureAndPage = () => {
 	let focusSliderPage = document.querySelector('.focus-slider-page ul');
 	focusSliderPicture.innerHTML = '';
 	focusSliderPage.innerHTML = '';
-	if (focusMenuIndex === 0) {
-		for (let i = 0; i < focusPictures0.length; i++) {
-			let html = `
-			<li><img src="${focusPictures0[i].src}"/></li>
+	for (let i = 0; i < focusPictures[focusMenuIndex].length; i++) {
+		let html = `
+			<li><img src="${focusPictures[focusMenuIndex][i].src}"/></li>
 		`
-			focusSliderPicture.innerHTML += html;
-			let html2 = `<li><img src="${focusPictures0[i].src}" /></li>`
-			focusSliderPage.innerHTML += html2;
+		focusSliderPicture.innerHTML += html;
+		let html2 = `<li><img src="${focusPictures[focusMenuIndex][i].src}" /></li>`
+		focusSliderPage.innerHTML += html2;
 
-		}
-		focusSliderPicture.style.width = focusPictures0.length * 740 + "px";
-		focusSliderPage.style.width = focusPictures0.length * 90 + "px";
-	} else if (focusMenuIndex === 1) {
-		for (let i = 0; i < focusPictures1.length; i++) {
-			let html = `
-			<li><img src="${focusPictures1[i].src}"/></li>
-		`
-			focusSliderPicture.innerHTML += html;
-			let html2 = `<li><img src="${focusPictures1[i].src}" /></li>`
-			focusSliderPage.innerHTML += html2;
-
-		}
-		focusSliderPicture.style.width = focusPictures1.length * 740 + "px";
-		focusSliderPage.style.width = focusPictures1.length * 90 + "px";
-	} else if (focusMenuIndex === 2) {
-		for (let i = 0; i < focusPictures2.length; i++) {
-			let html = `
-			<li><img src="${focusPictures2[i].src}"/></li>
-		`
-			focusSliderPicture.innerHTML += html;
-			let html2 = `<li><img src="${focusPictures2[i].src}" /></li>`
-			focusSliderPage.innerHTML += html2;
-
-		}
-		focusSliderPicture.style.width = focusPictures2.length * 740 + "px";
-		focusSliderPage.style.width = focusPictures2.length * 90 + "px";
-	} else if (focusMenuIndex === 3) {
-		for (let i = 0; i < focusPictures3.length; i++) {
-			let html = `
-			<li><img src="${focusPictures3[i].src}"/></li>
-		`
-			focusSliderPicture.innerHTML += html;
-			let html2 = `<li><img src="${focusPictures3[i].src}" /></li>`
-			focusSliderPage.innerHTML += html2;
-
-		}
-		focusSliderPicture.style.width = focusPictures3.length * 740 + "px";
-		focusSliderPage.style.width = focusPictures3.length * 90 + "px";
-	} else {
-		for (let i = 0; i < focusPictures4.length; i++) {
-			let html = `
-			<li><img src="${focusPictures4[i].src}"/></li>
-		`
-			focusSliderPicture.innerHTML += html;
-			let html2 = `<li><img src="${focusPictures4[i].src}" /></li>`
-			focusSliderPage.innerHTML += html2;
-
-		}
-		focusSliderPicture.style.width = focusPictures4.length * 740 + "px";
-		focusSliderPage.style.width = focusPictures4.length * 90 + "px";
 	}
+	focusSliderPicture.style.width = focusPictures[focusMenuIndex].length * 740 + "px";
+	focusSliderPage.style.width = focusPictures[focusMenuIndex].length * 90 + "px";
 	let focusSliderPageLi = document.querySelectorAll('.focus-slider-page li');
 	focusSliderPageLi[0].className = "show";
 	addFocusSliderPage();
