@@ -13,16 +13,14 @@ const bbsMenus = [{
 }]
 const BbsRightPicturesSrc = [{
 	src1: '../assets/pictures/5b580e60784568878806585_t.jpg',
-	src2: '../assets/pictures/5b580e60784568878806585_t.jpg'
+	src2: '../assets/pictures/5b580e60784568878806585_t.jpg',
+	illus1: '成都寻旧',
+	author1: '童强',
+	illus2: '成都寻旧',
+	author2: '童强'
 }]
 const BbsRightPictures = [
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -48,12 +46,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -79,12 +71,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -110,12 +96,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -141,12 +121,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -172,12 +146,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -203,12 +171,6 @@ const BbsRightPictures = [
 		author: '童强'
 	}],
 	[{
-		illus1: '成都寻旧',
-		author1: '童强',
-		illus2: '成都寻旧',
-		author2: '童强'
-
-	}, {
 		illus: '成都寻旧',
 		author: '童强'
 	}, {
@@ -301,15 +263,15 @@ let createBbsRightPicture = () => {
 	let bbsRightPictureSub = document.querySelectorAll('.bbs-picture-sub');
 	bbsRightPicture[0].src = BbsRightPicturesSrc[0].src1;
 	bbsRightPicture[1].src = BbsRightPicturesSrc[0].src2;
-	bbsRightPictureSub[0].innerHTML = `<p>${BbsRightPictures[bbsIndex][0].illus1}</p><p>作者：${BbsRightPictures[bbsIndex][0].author1}</p>`;
-	bbsRightPictureSub[1].innerHTML = `<p>${BbsRightPictures[bbsIndex][0].illus2}</p><p>作者：${BbsRightPictures[bbsIndex][0].author2}</p>`;
+	bbsRightPictureSub[0].innerHTML = `<p>${BbsRightPicturesSrc[0].illus1}</p><p>作者：${BbsRightPicturesSrc[0].author1}</p>`;
+	bbsRightPictureSub[1].innerHTML = `<p>${BbsRightPicturesSrc[0].illus2}</p><p>作者：${BbsRightPicturesSrc[0].author2}</p>`;
 
 }
 
 let createBbsLi = () => {
 	let BbsLi = document.querySelector('.bbs-li');
 	BbsLi.innerHTML = '';
-	for (let i = 1; i < 9; i++) {
+	for (let i = 0; i < 8; i++) {
 		let html = `<dl>
 						<dt>
 							<a href="#">${BbsRightPictures[bbsIndex][i].illus}</a>
