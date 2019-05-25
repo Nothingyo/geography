@@ -19,183 +19,20 @@ const BbsRightPicturesSrc = [{
 	illus2: '成都寻旧',
 	author2: '童强'
 }]
-const BbsRightPictures = [
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}],
-	[{
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}, {
-		illus: '成都寻旧',
-		author: '童强'
-	}]
-]
+let BbsRightPictures = [];
+let BbsRightPicturesItems = [];
+let createBbsRightPictures = () => {
+	for (let i = 0; i < 6; i++) {
+		BbsRightPicturesItems = [];
+		for (let j = 0; j < 8; j++) {
+			BbsRightPicturesItems.push({
+				illus: '成都寻旧' + Math.round(10 * Math.random()),
+				author: '童强'
+			})
+		}
+		BbsRightPictures.push(BbsRightPicturesItems);
+	}
+}
 let createBbs = () => {
 	let bbs = document.querySelector('.bbs');
 	let html = `
@@ -284,6 +121,7 @@ let createBbsLi = () => {
 		BbsLi.innerHTML += html;
 	}
 }
+createBbsRightPictures();
 createBbs();
 createBbsMenu();
 changeBbsIndex();
