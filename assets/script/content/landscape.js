@@ -94,7 +94,6 @@ let createLandscapeRight = () => {
 }
 let addLandscapePicture = () => {
 	let landscape_p = document.querySelectorAll('.landscape-p');
-	console.log(landscape_p);
 	landscapePictures.forEach((e, index) => {
 		let html = `<img src="${e.src}"/><div class="hide"><p>${e.illus}</p><p>作者：${e.author}</p></div>`
 		landscape_p[index].innerHTML = html;
