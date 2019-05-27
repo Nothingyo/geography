@@ -27,22 +27,21 @@ const focusMenu = [{
 }]
 let focusPictures = [];
 let focusPicturesItems = [];
-let createFocusPicturesItems = (num, args) => {
+let createFocusPicturesItems = (num, ...args) => {
 	for (let i = 0; i < num; i++) {
 		focusPicturesItems = [];
-		for (let j = 0; j < args[i]; j++) {
+		for (let j = 0; j < args[0][i]; j++) {
 			focusPicturesItems.push({
 				src: '../assets/pictures/5c4854e1301075g03932643.jpg',
 				illus: ''
 			});
-			console.log(focusPicturesItems);
+			//			console.log(focusPicturesItems);
 		}
 		//console.log(focusPicturesItems);
 		focusPictures.push(focusPicturesItems);
 	}
-	console.log(focusPictures);
+	//	console.log(focusPictures);
 }
-createFocusPicturesItems(5, [4, 4, 9, 5, 4]);
 let createContent = () => {
 	let html = `
 		<div class="ad">
@@ -196,4 +195,5 @@ createFocus();
 createFocusMenu();
 addFocusMenuClick();
 createFocusRight();
+createFocusPicturesItems(5, [4, 4, 9, 5, 4]);
 createFocusSliderPictureAndPage();
